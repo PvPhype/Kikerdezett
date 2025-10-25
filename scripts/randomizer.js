@@ -23,7 +23,7 @@ const typed2 = new Typed( '#kikerdezett_main' , {
     smartBackspace: false,
     loop: true,
     shuffle: false,
-    backDelay: 2000,
+    backDelay: 1000,
     startDelay: 3000,
 });
 
