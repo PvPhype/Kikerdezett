@@ -3,8 +3,20 @@ const { Typed } = window;
 
 const typed2 = new Typed( '#kikerdezett_main' , {
     strings: [
-        'Ki kérdezett?',
-        'Who asked you?',
+          'Ki kérdezett?',
+          'Who asked you?',
+          'Kto sa to pýtal?',
+          'Wer hat gefragt?',
+          'Qui a demandé?',
+          'Chi ha chiesto?',
+          '¿Quién preguntó?',
+          'Quem perguntou?',
+          'Kto zapytał?',
+          'Kdo se ptal?',
+          'Kdo je vprašal?',
+          'Hvem spurgte?',
+          'Vem frågade?',
+          'Kuka kysyi?'
     ],
     typeSpeed: 80,
     backSpeed: 60,

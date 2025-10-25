@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ki kérdezett?</title>
     <!-- Outside Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik+Dirt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Inside Styles -->
@@ -13,50 +17,21 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Inside Scripts -->
-    <script src="/Webmain/scripts/randomizer.js"></script>
 </head>
 <body>
 <!-- Első teljes képernyős blokk -->
 <section class="full-screen first-screen">
     <div class="container text-center">
-        <span id="kikerdezett_main"></span>
-        <p class="lead fs-4">Görgess le, hogy megtudd a választ!</p>
-    </div>
-    <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
+        <h1 class="kikerdezett_main"><span id="kikerdezett_main"></span><span class="typed-cursor"></span></h1>
+        <p class="lead fs-4" data-i18n="think">Gondolj csak bele! Milyen is lenne a világ idétlen gyökerek nélkül.</p>
     </div>
 </section>
 
 <!-- Tartalom rész -->
-<section class="content-section">
-    <div class="container">
-        <div class="joke-container">
-            <h2 class="text-center mb-4">A történet</h2>
-            <p class="fs-5">
-                Egyszer volt, hol nem volt, egy nagyon érdekes történet, amit mindenki hallani akart.
-                Volt benne minden: kaland, szerelem, titokzatos események, és egy csomó olyan dolog,
-                amit senki nem kérdezett...
-            </p>
-            <p class="fs-5 mt-4">
-                De igazából, ha belegondolsz, az élet tele van olyan történetekkel, amiket senki nem kérdezett.
-                Mégis, itt vagyunk, és meséljük őket egymásnak. Talán mert reménykedünk, hogy valakit érdekelni fog...
-            </p>
-            <p class="fs-5 mt-4">
-                Vagy talán csak azért, mert szeretnénk, ha valaki megkérdezné...
-            </p>
-
-            <div class="punchline">
-                SENKI SEM KÉRDEZTE!
-            </div>
-
-            <div class="text-center mt-5">
-                <p class="fs-4 mb-3">De legalább itt van menő zene letöltő oldal!</p>
-                <a href="" class="btn btn-primary btn-lg">
-                    <i class="fas fa-music me-2"></i>Zenéletöltő
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+    <a href="" class="btn btn-primary btn-lg">
+        <i class="fas fa-music me-2"></i>Zenéletöltő
+    </a>
+<script src="/Webmain/scripts/randomizer.js"></script>
+<script src="/Webmain/scripts/language.js"></script>
 </body>
 </html>
