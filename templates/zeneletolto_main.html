@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeneLetöltő - Ki kérdezett?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<!-- Vissza gomb -->
+<div class="container-fluid mt-3">
+    <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+        <i class="fas fa-arrow-left me-2"></i>Vissza a főoldalra
+    </a>
+</div>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <h1 class="display-4 fw-bold">ZeneLetöltő</h1>
+        <p class="lead fs-4">Senki sem kérdezte, de itt tudsz menően zenét letölteni!</p>
+    </div>
+</section>
+
+<!-- Letöltési lehetőségek -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Válaszd ki a letöltési módot</h2>
+
+        <div class="row">
+            <!-- YouTube Letöltés -->
+            <div class="col-md-4 mb-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube Letöltés</h3>
+                    <p>YouTube linkből letöltés MP3 formátumban,<br> 320 kbps minőségben</p>
+                    <span class="quality-badge">MP3 - 320 kbps</span>
+                    <span class="quality-badge">Cover Art</span>
+                    <a href="{{ url_for('youtube_download') }}" class="btn btn-primary mt-3">
+                        <i class="fas fa-download me-2"></i>YouTube letöltés
+                    </a>
+                </div>
+            </div>
+
+            <!-- Spotify Letöltés -->
+            <div class="col-md-4 mb-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="fab fa-spotify"></i>
+                    </div>
+                    <h3>Spotify Letöltés</h3>
+                    <p>Spotify linkből letöltés MP3 formátumban,<br> 320 kbps minőségben</p>
+                    <span class="quality-badge">MP3 - 320 kbps</span>
+                    <a href="{{ url_for('spotify_download') }}" class="btn btn-primary mt-3">
+                        Hamarosan
+                    </a>
+                </div>
+            </div>
+
+            <!-- FLAC Keresés -->
+            <div class="col-md-4 mb-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>FLAC Keresés</h3>
+                    <p>Keresés albumra, előadóra vagy számra FLAC formátumban</p>
+                    <span class="quality-badge">FLAC - 16-bit/44.1kHz</span>
+                    <a href="{{ url_for('search_download') }}" class="btn btn-primary mt-3">
+                        Hamarosan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

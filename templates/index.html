@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ki kérdezett?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<!-- Első teljes képernyős blokk -->
+<section class="full-screen first-screen">
+    <div class="container text-center">
+        <h1>Ki kérdezett?</h1>
+        <p class="lead fs-4">Görgess le, hogy megtudd a választ!</p>
+    </div>
+    <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- Tartalom rész -->
+<section class="content-section">
+    <div class="container">
+        <div class="joke-container">
+            <h2 class="text-center mb-4">A történet</h2>
+            <p class="fs-5">
+                Egyszer volt, hol nem volt, egy nagyon érdekes történet, amit mindenki hallani akart.
+                Volt benne minden: kaland, szerelem, titokzatos események, és egy csomó olyan dolog,
+                amit senki nem kérdezett...
+            </p>
+            <p class="fs-5 mt-4">
+                De igazából, ha belegondolsz, az élet tele van olyan történetekkel, amiket senki nem kérdezett.
+                Mégis, itt vagyunk, és meséljük őket egymásnak. Talán mert reménykedünk, hogy valakit érdekelni fog...
+            </p>
+            <p class="fs-5 mt-4">
+                Vagy talán csak azért, mert szeretnénk, ha valaki megkérdezné...
+            </p>
+
+            <div class="punchline">
+                SENKI SEM KÉRDEZTE!
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="fs-4 mb-3">De legalább itt van menő zene letöltő oldal!</p>
+                <a href="{{ url_for('zeneletolto_main') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-music me-2"></i>Zenéletöltő
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

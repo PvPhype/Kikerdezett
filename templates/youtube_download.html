@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Letöltés - Ki kérdezett?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<!-- Vissza gomb -->
+<div class="container-fluid mt-3">
+    <a href="{{ url_for('zeneletolto_main') }}" class="btn btn-outline-primary">
+        <i class="fas fa-arrow-left me-2"></i>Vissza a letöltési opciókhoz
+    </a>
+</div>
+
+<!-- Tartalom -->
+<section class="py-5">
+    <div class="container">
+        <div class="download-container">
+            <h2 class="section-title text-center">
+                <i class="fab fa-youtube me-2"></i>YouTube Letöltés
+            </h2>
+            <p class="text-center mb-4">Illeszd be a YouTube videó linkjét, és töltsd le MP3-ként 320 kbps minőségben</p>
+
+            <!-- Hibaüzenetek -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ 'danger' if category == 'error' else 'info' }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            <form action="{{ url_for('download_youtube') }}" method="POST">
+                <div class="mb-3">
+                    <label for="youtube-url" class="form-label">YouTube URL</label>
+                    <input type="url" class="form-control" id="youtube-url" name="url"
+                           placeholder="https://www.youtube.com/watch?v=..." required>
+                    <div class="form-text">
+                        Példák:
+                        <code>https://www.youtube.com/watch?v=VIDEO_ID</code> vagy
+                        <code>https://youtu.be/VIDEO_ID</code>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-download me-2"></i>Letöltés
+                    </button>
+                </div>
+            </form>
+
+            <div class="mt-4">
+                <h5><i class="fas fa-info-circle me-2"></i>Mi történik a letöltéssel?</h5>
+                <ul class="mt-3">
+                    <li><i class="fas fa-check text-success me-2"></i>A videó audiója MP3 formátumba konvertálódik</li>
+                    <li><i class="fas fa-check text-success me-2"></i>320 kbps minőségben mentődik el</li>
+                    <li><i class="fas fa-check text-success me-2"></i>A YouTube thumbnail-je kerül be cover art-ként</li>
+                    <li><i class="fas fa-check text-success me-2"></i>A fájl automatikusan letöltődik a számítógépedre</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Magas minőségű hang és metaadatok</li>
+                </ul>
+            </div>
+
+            <div class="mt-4 alert alert-success">
+                <h6><i class="fas fa-star me-2"></i>Prémium minőség</h6>
+                <p class="mb-0">Minden letöltött zene tartalmazza a YouTube videó borítóképét cover art-ként, és teljes metaadat-információkat.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

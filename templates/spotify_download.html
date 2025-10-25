@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Letöltés - Ki kérdezett?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<!-- Vissza gomb -->
+<div class="container-fluid mt-3">
+    <a href="{{ url_for('zeneletolto_main') }}" class="btn btn-outline-primary">
+        <i class="fas fa-arrow-left me-2"></i>Vissza a letöltési opciókhoz
+    </a>
+</div>
+
+<!-- Tartalom -->
+<section class="py-5">
+    <div class="container">
+        <div class="download-container">
+            <h2 class="section-title text-center">
+                <i class="fab fa-spotify me-2"></i>Spotify Letöltés
+            </h2>
+            <p class="text-center mb-4">Spotify linkből letöltés MP3 formátumban, 320 kbps minőségben</p>
+
+            <div class="text-center">
+                <div class="alert alert-info">
+                    <i class="fas fa-tools me-2"></i>
+                    A Spotify letöltés jelenleg fejlesztés alatt áll.
+                </div>
+                <div class="alert alert-warning">
+                    <i class="fas fa-info-circle me-2"></i>
+                    A Spotify API korlátozásai miatt ez a funkció komplexebb megoldást igényel.
+                </div>
+                <a href="{{ url_for('zeneletolto_main') }}" class="btn btn-secondary btn-lg">
+                    Vissza a letöltési opciókhoz
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
