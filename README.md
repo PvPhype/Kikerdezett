@@ -8,10 +8,10 @@ Használt technológiák: [HTML5](https://www.w3schools.com/html/), [CSS3](https
 
 > [Mrprogrammer](https://github.com/PvPhype),
 >
-> ![https://github.com/DarkAaronfox](Webmain/images/Robi.webp)
+> ![https://github.com/DarkAaronfox](images/Robi.webp)
 
 
 > [DarkAaronfox](https://github.com/DarkAaronfox)
 > 
-> ![https://github.com/DarkAaronfox](Webmain/images/Aaron.webp)
+> ![https://github.com/DarkAaronfox](images/Aaron.webp)
 
