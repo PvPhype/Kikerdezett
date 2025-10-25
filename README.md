@@ -6,12 +6,12 @@ Használt technológiák: [HTML5](https://www.w3schools.com/html/), [CSS3](https
 
 ## Fejlesztők:
 
->[Mrprogrammer](discord://-/users/360803213647151114),
+> [Mrprogrammer](https://github.com/PvPhype),
 >
 > ![https://github.com/DarkAaronfox](Webmain/images/Robi.webp)
 
 
-> [DarkAaronfox](discord://-/users/691340814554628147)
+> [DarkAaronfox](https://github.com/DarkAaronfox)
 > 
 > ![https://github.com/DarkAaronfox](Webmain/images/Aaron.webp)
 
