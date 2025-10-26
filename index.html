@@ -17,20 +17,102 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Inside Scripts -->
+    <style>
+        :root{
+            --bg:#2f3136;--panel:#36393f;--msg:#2b2d31;--muted:#b9bbbe;--accent:#7289da;--mention-bg:#3a2f65;--mention-text:#e3d7ff;--bubble:#313338;--time:#8e9297;font-family:'Josefin Sans', sans-serif;
+        }
+        body{background:var(--bg);color:#dcddde;margin:0;padding:0;}
+        .chat-wrap{max-width:960px;margin:40px auto;padding:24px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.6);}
+        .chat-header{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+        .server-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(114,137,218,0.25)}
+        .chat-header h2{font-size:18px;margin:0}
+        .chat-header .sub{font-size:12px;color:var(--muted)}
+        .chat-box{background:var(--panel);padding:18px;border-radius:10px;display:flex;flex-direction:column;gap:12px;}
+        .msg{display:flex;gap:12px;padding:10px;border-radius:8px}
+        .avatar{width:44px;height:44px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#6b7cff,#a281ff);display:grid;place-items:center;font-weight:700;color:white}
+        .content{flex:1}
+        .meta{display:flex;gap:8px;align-items:center;margin-bottom:4px}
+        .name{font-weight:600}
+        .time{font-size:12px;color:var(--time)}
+        .text{background:var(--bubble);padding:10px;border-radius:8px;color:#ddd;line-height:1.45}
+        .mention{background:var(--mention-bg);color:var(--mention-text);padding:2px 6px;border-radius:6px;font-weight:700}
+        .muted-link{display:block;margin-top:8px;color:var(--muted);font-size:13px;text-decoration:none}
+        @media(max-width:640px){.chat-wrap{margin:12px;padding:12px}.avatar{width:38px;height:38px}}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<!-- Első teljes képernyős blokk -->
 <section class="full-screen first-screen">
     <div class="container text-center">
         <h1 class="kikerdezett_main"><span id="kikerdezett_main"></span><span class="typed-cursor"></span></h1>
-        <p class="lead fs-4" data-i18n="think">Gondolj csak bele! Milyen is lenne a világ idétlen gyökerek nélkül.</p>
+        <p class="lead fs-4">Gondolj csak bele! Milyen is lenne a világ idétlen gyökerek nélkül.</p>
     </div>
 </section>
 
-<!-- Tartalom rész -->
+
+<div class="chat-wrap">
+    <div class="chat-header">
+        <div class="server-dot"></div>
+        <div>
+            <h2>Karácsonyi csoport</h2>
+            <div class="sub">#ünnepek • 5 résztvevő</div>
+        </div>
+    </div>
+
+
+    <div class="chat-box">
+        <div class="msg">
+            <div class="avatar">M</div>
+            <div class="content">
+                <div class="meta"><span class="name">Moruto</span><span class="time">2025.12.26 13:50</span></div>
+                <div class="text">Na és, hogy telnek az ünnepek?</div>
+            </div>
+        </div>
+
+
+        <div class="msg">
+            <div class="avatar" style="background:linear-gradient(135deg,#ff8a65,#ffcc80);">N</div>
+            <div class="content">
+                <div class="meta"><span class="name">Normal_Person</span><span class="time">2025.12.26 13:57</span></div>
+                <div class="text">Tiszta klasszikus karácsony. Már három napja bejglin élek.</div>
+            </div>
+        </div>
+
+
+        <div class="msg">
+            <div class="avatar" style="background:linear-gradient(135deg,#6ee7b7,#34d399);">S</div>
+            <div class="content">
+                <div class="meta"><span class="name">Spike</span><span class="time">2025.12.26 14:04</span></div>
+                <div class="text">Nálam végre chill van, sok kaja, sok film, nulla stressz</div>
+            </div>
+        </div>
+
+
+        <div class="msg">
+            <div class="avatar" style="background:linear-gradient(135deg,#60a5fa,#3b82f6);">B</div>
+            <div class="content">
+                <div class="meta"><span class="name">BlueStars</span><span class="time">2025.12.26 14:12</span></div>
+                <div class="text">Én is csak faszt tudok verni <span class="mention">@everyone</span></div>
+            </div>
+        </div>
+
+
+        <div class="msg">
+            <div class="avatar" style="background:linear-gradient(135deg,#9fa8da,#7c4dff);">P</div>
+            <div class="content">
+                <div class="meta"><span class="name">Mr. Programmer</span><span class="time">2025.12.26 14:15</span></div>
+                <div class="text">Gratulálok Ön megnyerte a kit érdekel kuponunkat, amit most december 1-ig tud kiváltani, a sehol és semikor nevű semmiben. És mellé jár egy maradj már és ne everyone-zál légyszives, hogy ütne le a vasból készült üllő kuponunk is. Köszönöm szépen.<a class="muted-link" href="#">https://kikerdezett.hu/kuponok/-ra</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Tartalom rész
     <a href="" class="btn btn-primary btn-lg">
         <i class="fas fa-music me-2"></i>Zenéletöltő
-    </a>
+    </a> -->
 <script src="/scripts/language.js"></script>
 <script src="/scripts/randomizer.js"></script>
 </body>
